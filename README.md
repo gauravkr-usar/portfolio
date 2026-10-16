@@ -32,30 +32,25 @@ gaurav-portfolio/
 │   │   └── PortfolioApplication.java
 │   ├── src/main/resources/
 │   │   └── application.properties       # Server port (8085) & logging
+│   ├── Dockerfile                       # Multi-stage production container
 │   ├── mvnw.cmd / mvnw                  # Maven Wrapper (Java 21)
 │   └── pom.xml
 │
-└── frontend/                            # Next.js 16 + React 19 Client
-    ├── src/
-    │   ├── app/
-    │   │   ├── globals.css              # Obsidian Glassmorphic Design System
-    │   │   ├── layout.tsx               # SEO Metadata & Google Fonts
-    │   │   └── page.tsx                 # Main portfolio page assembly
-    │   ├── components/
-    │   │   ├── Navbar.tsx               # Sticky glassmorphism header & live API badge
-    │   │   ├── Hero.tsx                 # Pitch, DSA metrics & code terminal
-    │   │   ├── ProjectsSection.tsx      # Category filter & project cards
-    │   │   ├── ArchitectureDiagram.tsx  # QueryDocs AI & SWVAS system diagrams
-    │   │   ├── SkillsSection.tsx        # Categorized skill matrix & progress bars
-    │   │   ├── ExperienceSection.tsx    # Research under Dr. Ashish Joshi & USAR
-    │   │   ├── CertificationsSection.tsx# Nasscom Gen AI 101, HackerRank & Hackathons
-    │   │   ├── AiAssistantWidget.tsx    # Floating conversational AI drawer
-    │   │   ├── ContactSection.tsx       # Live Spring Boot contact form
-    │   │   └── Footer.tsx               # Back to top & social channels
-    │   ├── lib/api.ts                   # Fetch client for Spring Boot endpoints
-    │   ├── types/portfolio.ts           # Shared TypeScript interfaces
-    │   └── data/fallbackData.ts         # Zero-latency hydration data
-    └── package.json
+├── frontend/                            # Next.js 16 + React 19 Client
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── api/                     # Serverless proxy handlers (chat, contact, health)
+│   │   │   ├── globals.css              # Obsidian Glassmorphic Design System
+│   │   │   ├── layout.tsx               # SEO Metadata & Google Fonts
+│   │   │   └── page.tsx                 # Main portfolio page assembly
+│   │   ├── components/                  # Navbar, Hero, Projects, Skills, Contact, Footer
+│   │   ├── lib/api.ts                   # Fetch client with intelligent local/cloud routing
+│   │   └── data/fallbackData.ts         # Zero-latency hydration data
+│   ├── vercel.json                      # Vercel configuration
+│   └── package.json
+│
+├── render.yaml                          # Render Blueprint for Spring Boot Web Service
+└── README.md
 ```
 
 ---
@@ -79,12 +74,37 @@ Open [http://localhost:3000](http://localhost:3000) (or `http://localhost:3001` 
 
 ---
 
+## ☁️ Deployment & Hosting Guide
+
+### Option A: Deploy Frontend to Vercel (Recommended • 100% Free • ~60 Seconds)
+1. Go to **[vercel.com/new](https://vercel.com/new)** and sign in with GitHub.
+2. Select your repository: **`gauravkr-usar/portfolio`**.
+3. Under **Root Directory**, click **Edit** and choose: **`frontend`**.
+4. Click **Deploy**!
+*Your portfolio will be live at `https://portfolio-xxxx.vercel.app` with zero setup.*
+
+### Option B: Deploy Backend to Render (Free Web Service)
+1. Log in to **[render.com](https://dashboard.render.com/)**.
+2. Click **New +** -> **Web Service**.
+3. Select your repository: **`gauravkr-usar/portfolio`**.
+4. Configure:
+   - **Root Directory**: `backend`
+   - **Runtime**: `Docker` (or Java with Maven)
+   - **Plan**: `Free`
+5. Click **Deploy Web Service**!
+6. Once deployed, take your Render URL (e.g. `https://gaurav-portfolio-backend.onrender.com`) and add it to Vercel as an environment variable:
+   `SPRING_BOOT_URL=https://gaurav-portfolio-backend.onrender.com`
+
+---
+
 ## 👨‍💻 Candidate Profile
 
 - **Name**: Gaurav Kumar
 - **Degree**: B.Tech in Artificial Intelligence & Machine Learning (2023 – 2027), CGPA: 7.6
 - **Institution**: University School of Automation and Robotics (USAR), Guru Gobind Singh Indraprastha University (GGSIPU), Delhi
 - **GitHub**: [https://github.com/gauravkr-usar](https://github.com/gauravkr-usar)
+- **LinkedIn**: [https://www.linkedin.com/in/gauravk001/](https://www.linkedin.com/in/gauravk001/)
+- **LeetCode**: [https://leetcode.com/u/gaurav_usar/](https://leetcode.com/u/gaurav_usar/)
+- **Codolio**: [https://codolio.com/profile/gaurav_usar](https://codolio.com/profile/gaurav_usar)
 - **Email**: [gaurav852799@gmail.com](mailto:gaurav852799@gmail.com)
 - **Phone**: +91 8527994404
-- **DSA Achievements**: 500+ Problems Solved, LeetCode Rating 1580+, HackerRank 5-Star Java & 4-Star SQL
