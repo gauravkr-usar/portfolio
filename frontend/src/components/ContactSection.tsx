@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Code2, ArrowUpRight } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetCodeIcon, CodolioIcon } from './Icons';
 import { Profile } from '../types/portfolio';
 import { submitContact } from '../lib/api';
 
@@ -149,14 +149,26 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   </a>
 
                   <a
-                    href={profile.codolioUrl}
+                    href={profile.leetcodeUrl || "https://leetcode.com/u/gaurav_usar/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-secondary"
                     style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
                   >
-                    <Code2 size={15} color="#f59e0b" />
-                    <span>Codolio / LeetCode</span>
+                    <LeetCodeIcon size={16} />
+                    <span>LeetCode</span>
+                    <ArrowUpRight size={13} color="#64748b" />
+                  </a>
+
+                  <a
+                    href={profile.codolioUrl || "https://codolio.com/profile/gaurav_usar"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                  >
+                    <CodolioIcon size={16} />
+                    <span>Codolio</span>
                     <ArrowUpRight size={13} color="#64748b" />
                   </a>
                 </div>

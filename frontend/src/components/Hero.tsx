@@ -186,15 +186,27 @@ export async function getPortfolioData() {
               }}
               className="metric-grid"
             >
-              <div style={metricCardStyle}>
+              <a
+                href={profile.leetcodeUrl || "https://leetcode.com/u/gaurav_usar/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View LeetCode Profile: gaurav_usar"
+                style={{ ...metricCardStyle, textDecoration: 'none', transition: 'all 0.2s', display: 'block' }}
+              >
                 <div style={metricNumberStyle}>500+</div>
-                <div style={metricLabelStyle}>DSA Problems</div>
-              </div>
+                <div style={metricLabelStyle}>DSA Problems ↗</div>
+              </a>
 
-              <div style={metricCardStyle}>
+              <a
+                href={profile.leetcodeUrl || "https://leetcode.com/u/gaurav_usar/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View LeetCode Rating: 1580+"
+                style={{ ...metricCardStyle, textDecoration: 'none', transition: 'all 0.2s', display: 'block' }}
+              >
                 <div style={metricNumberStyle}>1580+</div>
-                <div style={metricLabelStyle}>LeetCode Rating</div>
-              </div>
+                <div style={metricLabelStyle}>LeetCode Rating ↗</div>
+              </a>
 
               <div style={metricCardStyle}>
                 <div style={metricNumberStyle}>13+</div>

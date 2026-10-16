@@ -38,3 +38,42 @@ export function LinkedinIcon({ size = 18, className = '', color = 'currentColor'
     </svg>
   );
 }
+
+export function LeetCodeIcon({ size = 18, className = '' }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M16 3l-8.5 8.5a3.5 3.5 0 0 0 0 5L12 21" stroke="#f59e0b" />
+      <path d="M8 12h12" stroke="#ea580c" />
+    </svg>
+  );
+}
+
+export function CodolioIcon({ size = 18, className = '' }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="9" stroke="#06b6d4" />
+      <path d="M10 9l-3 3 3 3" stroke="#06b6d4" />
+      <path d="M14 9l3 3-3 3" stroke="#06b6d4" />
+    </svg>
+  );
+}

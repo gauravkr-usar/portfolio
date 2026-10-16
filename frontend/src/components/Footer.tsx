@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Code2, ArrowUp, Heart, Terminal } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetCodeIcon, CodolioIcon } from './Icons';
 import { Profile } from '../types/portfolio';
 
 interface FooterProps {
@@ -85,13 +85,25 @@ export default function Footer({ profile }: FooterProps) {
             </a>
 
             <a
-              href={profile.codolioUrl}
+              href={profile.leetcodeUrl || "https://leetcode.com/u/gaurav_usar/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LeetCode Profile"
+              title="LeetCode: gaurav_usar"
+              style={footerIconBtnStyle}
+            >
+              <LeetCodeIcon size={18} />
+            </a>
+
+            <a
+              href={profile.codolioUrl || "https://codolio.com/profile/gaurav_usar"}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Codolio Profile"
+              title="Codolio: gaurav_usar"
               style={footerIconBtnStyle}
             >
-              <Code2 size={18} />
+              <CodolioIcon size={18} />
             </a>
 
             <button

@@ -8,6 +8,7 @@ export interface Profile {
   githubUrl: string;
   linkedinUrl: string;
   codolioUrl: string;
+  leetcodeUrl: string;
   avatarUrl: string;
   summary: string;
   highlights: Record<string, string>;

@@ -54,14 +54,16 @@ public class AiAssistantService {
             );
         }
 
-        if (query.contains("dsa") || query.contains("leetcode") || query.contains("problem") || query.contains("rating") || query.contains("hackerrank")) {
+        if (query.contains("dsa") || query.contains("leetcode") || query.contains("problem") || query.contains("rating") || query.contains("hackerrank") || query.contains("codolio")) {
             return new ChatResponse(
                 "### **Problem Solving & Competitive Programming**\n\n" +
                 "- **500+ DSA Problems Solved**: Proficient in Data Structures, Dynamic Programming, Trees, Graphs, Sliding Window, and Greedy algorithms.\n" +
                 "- **LeetCode Rating**: **1580+** (Active competitor on LeetCode & Codolio).\n" +
                 "- **HackerRank**: **5-Star Java** badge & **4-Star SQL** badge.\n" +
                 "- **Hackathons**: Runner-up at UIET *'Brain and Bots'* & cleared internal screening round for **Smart India Hackathon**.\n\n" +
-                "Profile Link: [Codolio Profile](https://codolio.com/profile/gauravkr).",
+                "Profile Links:\n" +
+                "- [LeetCode Profile (gaurav_usar)](https://leetcode.com/u/gaurav_usar/)\n" +
+                "- [Codolio Profile (gaurav_usar)](https://codolio.com/profile/gaurav_usar)",
                 List.of("What is Gaurav's tech stack?", "Show university & education", "Contact Gaurav"),
                 Collections.emptyList()
             );

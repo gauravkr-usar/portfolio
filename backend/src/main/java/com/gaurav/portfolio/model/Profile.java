@@ -13,6 +13,7 @@ public class Profile {
     private String githubUrl;
     private String linkedinUrl;
     private String codolioUrl;
+    private String leetcodeUrl;
     private String avatarUrl;
     private String summary;
     private Map<String, String> highlights;
@@ -21,7 +22,7 @@ public class Profile {
     public Profile() {}
 
     public Profile(String name, String title, String subtitle, String location, String email, 
-                   String phone, String githubUrl, String linkedinUrl, String codolioUrl, 
+                   String phone, String githubUrl, String linkedinUrl, String codolioUrl, String leetcodeUrl,
                    String avatarUrl, String summary, Map<String, String> highlights, List<String> focusAreas) {
         this.name = name;
         this.title = title;
@@ -32,6 +33,7 @@ public class Profile {
         this.githubUrl = githubUrl;
         this.linkedinUrl = linkedinUrl;
         this.codolioUrl = codolioUrl;
+        this.leetcodeUrl = leetcodeUrl;
         this.avatarUrl = avatarUrl;
         this.summary = summary;
         this.highlights = highlights;
@@ -64,6 +66,9 @@ public class Profile {
 
     public String getCodolioUrl() { return codolioUrl; }
     public void setCodolioUrl(String codolioUrl) { this.codolioUrl = codolioUrl; }
+
+    public String getLeetcodeUrl() { return leetcodeUrl; }
+    public void setLeetcodeUrl(String leetcodeUrl) { this.leetcodeUrl = leetcodeUrl; }
 
     public String getAvatarUrl() { return avatarUrl; }
     public void setAvatarUrl(String avatarUrl) { this.avatarUrl = avatarUrl; }

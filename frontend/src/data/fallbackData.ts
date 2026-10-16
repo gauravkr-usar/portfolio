@@ -9,7 +9,8 @@ export const fallbackProfile: Profile = {
   phone: "+91 8527994404",
   githubUrl: "https://github.com/gauravkr-usar",
   linkedinUrl: "https://www.linkedin.com/in/gauravk001/",
-  codolioUrl: "https://codolio.com/profile/gauravkr",
+  codolioUrl: "https://codolio.com/profile/gaurav_usar",
+  leetcodeUrl: "https://leetcode.com/u/gaurav_usar/",
   avatarUrl: "https://avatars.githubusercontent.com/u/173763159?v=4",
   summary: "Final-year B.Tech AI/ML student at USAR (GGSIPU) building enterprise-grade full-stack applications with Java/Spring Boot, React, and Node.js, plus applied GenAI: RAG architectures with Spring AI and pgvector, LLM API integrations (Groq, OpenAI, Gemini), JWT/OAuth security, microservices with Eureka and OWASP ZAP scanning. Solved 500+ DSA problems with LeetCode rating 1580+.",
   highlights: {
@@ -296,9 +297,9 @@ export const fallbackCertifications: Certification[] = [
   {
     id: "achieve-dsa",
     title: "500+ DSA Problems Solved & LeetCode 1580+",
-    issuer: "LeetCode / Codolio",
+    issuer: "LeetCode & Codolio Verified",
     date: "Consistent",
-    credentialUrl: "https://codolio.com/profile/gauravkr",
+    credentialUrl: "https://leetcode.com/u/gaurav_usar/",
     category: "Achievement",
     description: "Mastered array manipulation, dynamic programming, tree traversals, graph algorithms, and sliding window techniques."
   },
